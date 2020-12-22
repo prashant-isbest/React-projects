@@ -1,4 +1,4 @@
 Project 1
 
-    Seasons
-    <img src="./seasons hemisphere/seasons.gif">
+   <h1>Seasons </h1>
+   <img src = "/seasons hemisphere/seasons.gif">
