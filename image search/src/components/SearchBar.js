@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
     // console.log(this.state.term);
   };
 
-  state = { term: '$ ' };
+  state = { term: '' };
   render() {
     return (
       <div className="ui segment">
