@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 const Search = () => {
-  const [term, setTerm] = useState('');
+  const [term, setTerm] = useState('game');
   const [results, setResults] = useState([]);
 
+  //we are only allowed to return a function from useEfect
   useEffect(() => {
     const search = async () => {
       const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
@@ -19,8 +20,19 @@ const Search = () => {
       setResults(data.query.search);
       // console.log(results);
     };
-    if (term) {
+
+    if (term && !results.length) {
       search();
+    } else {
+      const timeoutId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+      }, 500);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
     }
   }, [term]);
 
