@@ -6,16 +6,18 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   const ref1 = useRef();
 
   useEffect(() => {
-    document.body.addEventListener(
-      'click',
-      (event) => {
-        console.log('body click');
-        if (ref1.current && ref1.current.contains(event.target)) return;
-        setOpen(false);
-        console.log('body setOpen fired');
-      },
-      { capture: true }
-    );
+    const onBodyClick = (event) => {
+      console.log('body click');
+      if (ref1.current && ref1.current.contains(event.target)) return;
+      setOpen(false);
+      console.log('body setOpen fired');
+    };
+
+    document.body.addEventListener('click', onBodyClick, { capture: true });
+
+    return () => {
+      document.body.removeEventListener('click', onBodyClick);
+    };
   }, []);
 
   const renderedOptions = options.map((option) => {
@@ -37,6 +39,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   });
   return (
     <div ref={ref1} className="ui form">
+      <h1 style={{ color: `${selected.value}` }}>just a random text</h1>
       <div className="field">
         <div className="label">Select something</div>
         <div

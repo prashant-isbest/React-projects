@@ -37,8 +37,11 @@ const App = () => {
   const [showDropdown, setShowDropdown] = useState(true);
   return (
     /* <Accordion items={items} /> */
-    <div>
-      <button onClick={() => setShowDropdown(!showDropdown)}>
+    <div style={{ textAlign: 'center' }}>
+      <button
+        className="ui button"
+        onClick={() => setShowDropdown(!showDropdown)}
+      >
         Toggle Dropdown
       </button>
       {showDropdown ? (
