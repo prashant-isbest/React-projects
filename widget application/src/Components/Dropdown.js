@@ -39,7 +39,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   });
   return (
     <div ref={ref1} className="ui form">
-      <h1 style={{ color: `${selected.value}` }}>just a random text</h1>
+      {/* <h1 style={{ color: `${selected.value}` }}>just a random text</h1> */}
       <div className="field">
         <div className="label">Select something</div>
         <div
