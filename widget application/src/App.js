@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Accordion from './Components/Accordion';
 import Search from './Components/Search';
 import Dropdown from './Components/Dropdown';
+import Translate from './Components/Translate';
 const items = [
   {
     title: 'What is React?',
@@ -33,10 +34,11 @@ const options = [
 ];
 
 const App = () => {
+  /*
   const [selected, setSelected] = useState(options[0]);
   const [showDropdown, setShowDropdown] = useState(true);
   return (
-    /* <Accordion items={items} /> */
+   // <Accordion items={items} />  
     <div style={{ textAlign: 'center' }}>
       <button
         className="ui button"
@@ -51,6 +53,13 @@ const App = () => {
           options={options}
         />
       ) : null}
+    </div>
+    );  
+    */
+
+  return (
+    <div>
+      <Translate />
     </div>
   );
 };
