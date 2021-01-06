@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const Dropdown = ({ label, options, selected, onSelectedChange }) => {
+const Dropdown = ({ text, label, options, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
 
   const ref1 = useRef();
@@ -39,7 +39,14 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   });
   return (
     <div ref={ref1} className="ui form">
-      {/* <h1 style={{ color: `${selected.value}` }}>just a random text</h1> */}
+      <h1
+        style={{
+          textAlign: 'center',
+          color: `${selected.value}`,
+        }}
+      >
+        {text}
+      </h1>
       <div className="field">
         <div className="label">{label}</div>
         <div
