@@ -19,4 +19,4 @@ Project 3
    <hr>
    <h2>Dropdown and Translate</h2>
    <p>The translation are made using the google translate api and the api is set to work only on the localhost,more languages can be easily added as per the choice</p>
-   <img src="/widget application/dropdown and translate.gif>
+   <img src="/widget application/dropdown and translate.gif">
