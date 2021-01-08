@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project uses [Semantic UI] (https://semantic-ui.com/) for most of the styling
+
 ## Available Scripts
 
 In the project directory, you can run:
