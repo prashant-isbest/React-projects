@@ -27,3 +27,9 @@ Project 4
    <p>This project uses youTube data v3 api to fetch the results and iframe tag to play the videos </p>
    <img src="/videos app/videos app.gif">
    <a href="https://videos-app-six.vercel.app">Deployment his here</a>
+
+Project 5
+
+   <h1>Songs app</h1>
+   <p>First app using redux and react-redux for state management</p>
+   <img src="/songs redux/songs redux.gif">
